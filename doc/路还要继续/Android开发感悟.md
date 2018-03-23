@@ -1,0 +1,19 @@
+## Android系统开发工作感悟
+- repo
+- git
+- gerrit
+- adb 
+- fastboot
+- vim
+- bash
+- sourceinsight
+- putty
+- secureCRT
+- ssh
+- sftp
+- eclipse
+- android studio
+- linux
+- shell
+- makefile
+- python
