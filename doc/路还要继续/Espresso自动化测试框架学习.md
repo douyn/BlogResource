@@ -56,7 +56,7 @@ Espresso非常简单医用，并且可定制，能清楚的表明期望，交互
 	@RunWith(AndroidJUnit4.class)
     public class MainActivityTest{
     	@Rule
-        public ActivityRule mActivityRule = new ActivityRule(MainActivity.class);
+        public ActivityTestRule mActivityRule = new ActivityTestRule(MainActivity.class);
         
         @Test
         public void runTest(){
