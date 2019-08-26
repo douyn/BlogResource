@@ -3,4 +3,6 @@
 1. git clone
 2. git submodule update --init
 3. make generate
-4. assemble installDebug
+4. gradlew assemble installDebug
+
+

@@ -1,0 +1,17 @@
+adb root
+
+adb shell
+>rm /data/system/locksettings.db
+>rm /data/system/locksettings.db-shm
+>rm /data/system/locksettings.db-wal
+>rm /data/system/gatekeeper.password.key
+>rm /data/system/gatekeeper.pattern.key
+
+>rm /data/system/fingerprintpassword.key
+>rm /data/system/personal.key
+>rm /data/system/gesture.key
+>rm /data/system/password.key 
+
+
+以上针对7.0及以上手机，如果有就删除。7.0以下好像是删掉/data/system/gesture.key和/data/system/password.key就可以
+

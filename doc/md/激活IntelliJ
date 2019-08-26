@@ -1,0 +1,12 @@
+
+##
+
+## 步骤
+
+1. 将“0.0.0.0 account.jetbrains.com”及“0.0.0.0 www.jetbrains.com”添加到/etc/hosts文件中
+2. 在该网站获取注册码 http://idea.lanyus.com/
+3. 在IDEA的激活页面选择注册码激活方式，填入上一步获取的注册码
+
+
+## 参考
+http://idea.lanyus.com/

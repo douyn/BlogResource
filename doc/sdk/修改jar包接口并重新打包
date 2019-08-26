@@ -1,0 +1,15 @@
+# 修改jar包中的接口并重新打包(使用Android studio或直接使用javac)
+
+## 1. 解包
+将jar包修改后缀为.zip并解压缩
+
+## 2. 修改并得到.class文件
+在项目中创建同包名目录(我是重新创建了一个项目)，并创建你要修改的类xx.java，将解压之后获取的xx.class的代码(Android studio可直接阅读.class文件源码)>复制到xx.java。
+
+如果是简单的类没有依赖的话，就可以直接make project，编译成功之后在 ./build/intermediates/javac/debug/compileDebugJavaWithJavac/classes下即可得到.c
+lass文件
+
+如果复杂的类有其他依赖，记得也到将依赖的类创建进来，不染编译不过
+
+## 3. 替换class文件
+用得到的.class文件替换解包后的目录中的同名文件，并重新压缩。然后修改后缀为.jar即可使用

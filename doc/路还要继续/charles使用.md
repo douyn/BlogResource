@@ -33,3 +33,27 @@ charles抓包打开https数据中有unknown，并且返回的数据中有乱码�
 将下载的charles.jar覆盖到/usr/lib/charles-proxy文件夹下即可。
 #### 参考
 [ [原创破解] charles-proxy 抓包工具 v4.2 Win + Mac + Linux全平台破解文件 ](https://www.52pojie.cn/thread-619994-1-1.html)
+
+## 新增(2019-04-18 14:53:05)
+#### Android 7.0以上抓包失败
+
+Android7.0 之后默认不信任用户添加到系统的CA证书：
+
+> To provide a more consistent and more secure experience across the Android ecosystem, beginning with Android Nougat, compatible devices trust only the standardized system CAs maintained in AOSP.（[文档链接](https://android-developers.googleblog.com/2016/07/changes-to-trusted-certificate.html)）
+
+也就是说对基于 SDK24 及以上的APP来说，即使你在手机上安装了抓包工具的证书也无法抓取 https 请求 
+
+
+### 解决方案
+将抓包软件的证书安装成系统证书（需ROOT）
+
+
+
+
+
+
+
+
+
+#### 参考
+[Android 7.0 之后抓包 unknown 和证书无效的解决方案（无需改代码）](https://blog.csdn.net/ShadowySpirits/article/details/79756274)

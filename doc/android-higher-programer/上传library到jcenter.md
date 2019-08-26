@@ -26,7 +26,7 @@
             apply plugin: 'com.jfrog.bintray'
             apply plugin: 'maven-publish'
 
-            def baseUrl = 'https://xxx' // 可空
+            def baseUrl = 'https://xxx' // 可空 // 一般为项目开源地址
             def siteUrl = baseUrl
             def gitUrl = "${baseUrl}/shugo" //可空
             def issueUrl = "${baseUrl}/issues" // 可空
@@ -70,7 +70,7 @@
             //配置上传Bintray相关信息
             bintray {
                 user = "your user name" // * 必填
-                key = "your api key" // * 必填
+                key = "your api key" // * 必填 https://bintray.com/profile/edit 中API Key
 
                 configurations = ['archives']
                 pkg {
@@ -89,6 +89,25 @@
             
 	3. 执行gradlew install && gradlew bintrayUpload，也可以sync之后，在右侧边栏gradle 菜单中找到module/other/install和module/publish/bintrayUpload执行
 
+	4. 项目中调用
+		project build.gradle :
+
+			
+allprojects {
+    repositories {
+        jcenter()
+        google()
+
+        mavenCentral()
+        maven {
+            url 'https://dl.bintray.com/sparky/common'
+        }
+    }
+}
+
+		module build.gralde :
+
+			implementation 'xxx'
 #### 问题:
 
 ##### 1. http 1.0 code=409
